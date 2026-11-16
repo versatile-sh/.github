@@ -49,7 +49,6 @@ Each part is an engine of its own. It stands alone, exchanges events with the ot
 
 | Product | What it is | Status |
 | --- | --- | --- |
-| **adaptable.chat** | A chat where people and AI agents work in the same channels. Agents answer, ask, and wait for a person when the decision is not theirs. The first product built on the engines. | In development. Opens in early access, in small groups. |
 | **[live.versatile.sh](https://live.versatile.sh)** | Rooms to share a screen, a voice and a camera from a link. No account, nothing to install. | Open. |
 
 ## Open source
