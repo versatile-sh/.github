@@ -1,77 +1,101 @@
-# versatile.sh
+<a href="https://versatile.sh">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/banner-light.svg">
+    <img alt="Run anywhere. Run anything. Be versatile. versatile.sh" src="./assets/banner-dark.svg" width="100%">
+  </picture>
+</a>
 
-**AI agents that run businesses, with a person signing off on what matters.**
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/logo-light.svg">
+    <img alt="versatile.sh" src="./assets/logo-dark.svg" width="320">
+  </picture>
+</p>
 
-Most software asks a company to move in and adapt to it. We build the other way: software that takes the shape of the stack, the place and the tools a company already has. On top of that we put AI agents that do real work next to people, each with a job, a limit and a person who can stop it.
+<p align="center">
+  <a href="https://versatile.sh"><b>versatile.sh</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://versatile.sh/posts">Posts</a>
+  &nbsp;·&nbsp;
+  <a href="https://x.com/versatile_sh">X</a>
+  &nbsp;·&nbsp;
+  <a href="https://bsky.app/profile/versatile.sh">Bluesky</a>
+  &nbsp;·&nbsp;
+  <a href="https://www.instagram.com/versatile.sh/">Instagram</a>
+  &nbsp;·&nbsp;
+  <a href="mailto:hello@versatile.sh">hello@versatile.sh</a>
+</p>
 
-## What we are here to do
+Most software asks a company to move in and adapt to it. We build the other kind: software that takes the shape of the stack, the place and the tools a company already has. **Run it how you want, where you want, with what you want.**
 
-Companies are being told to hand work to AI agents. Most of what is on offer either does very little, or does a great deal with nobody watching. We think the useful version sits between the two: agents that take on real work in engineering, support, sales, operations and finance, inside limits a person set, and that wait for that person whenever a decision is not theirs to make.
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="./assets/section-premises-light.svg">
+  <img alt="01 · premises" src="./assets/section-premises-dark.svg" width="100%">
+</picture>
 
-So our goal is plain. **Make it safe and ordinary for a company to run part of its operations with AI agents**, without giving up control of what reaches its customers, its money or its systems, and without having to rebuild itself around someone else's product.
+| Premise | In one line | What it rules out |
+| --- | --- | --- |
+| **Flexible** | How you want, where you want, with what you want. | One way to run it, one place to run it |
+| **No lock-in** | Swap any vendor, model or cloud without rewriting the rest. | Formats and APIs only we can read |
+| **Your data, your infrastructure** | It runs where your data already lives. | Copying your data out to make the software work |
+| **Open standards** | Standard protocols and versioned contracts at every boundary. | Private wire formats, silent breaking changes |
+| **A person in control** | Software does the work; a person decides what matters. | Irreversible actions nobody approved |
+| **Secure by default** | Closed unless allowed, least privilege, secrets never logged. | Wide-open defaults, one company seeing another's data |
 
-## Three ideas every part follows
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="./assets/section-principles-light.svg">
+  <img alt="02 · principles" src="./assets/section-principles-dark.svg" width="100%">
+</picture>
+
+Six rules every piece we build follows. Each has its own page on [versatile.sh/principles](https://versatile.sh/principles).
 
 | | |
 | --- | --- |
-| **Run it how you want** | Take one engine or the whole set. Call it from your product, your agents or the command line, and fill the gaps with pieces of your own. |
-| **Where you want** | On a laptop, on your own servers or in your cloud. The software goes where your data already lives, not the other way around. |
-| **With what you want** | Your database, your queue, your models, your tools. Each one plugs in, and can be swapped later without rebuilding the rest. |
+| [**Extensible**](https://versatile.sh/principles/extensible) | Add what is missing without touching what works. Every port takes a built-in piece, an in-memory stand-in or one of yours, chosen by configuration. |
+| [**Decoupled**](https://versatile.sh/principles/decoupled) | Pieces stand apart and meet only through contracts and events. Nothing is welded. |
+| [**Flexible**](https://versatile.sh/principles/flexible) | On a laptop, on your servers or in your cloud, with the same code. |
+| [**Robust**](https://versatile.sh/principles/robust) | Work survives a crash and never runs twice by accident. |
+| [**Scalable**](https://versatile.sh/principles/scalable) | Grows by carrying only what each call needs. Numbers only when measured. |
+| [**Elegant**](https://versatile.sh/principles/elegant) | Few rules, small cores, nothing written twice. |
 
-## What an agent is, here
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="./assets/section-ship-light.svg">
+  <img alt="03 · what we ship" src="./assets/section-ship-dark.svg" width="100%">
+</picture>
 
-- An agent has a role, instructions, a model and a budget. It can be paused, retired and restored without losing its history.
-- An agent can propose any change, and only a person can make it real. Changes to your systems wait for an approval that shows exactly what will change.
-- An agent reaches exactly what you gave it and leaves a trace of everything it did. Credentials stay in a vault; a run receives only the secrets it is allowed.
-- A budget you only read after the work is done is a report, not a limit. Spend is capped per agent and per team: it warns first, then stops.
-- An agent does not need you at the keyboard. Give it a routine and it wakes on its own, does the job and leaves a trail.
+1. **Premises first.** A way of building software that the rest has to follow.
+2. **Open source next.** Pieces anyone can run, read and extend, released one at a time.
+3. **Then products.** Built on the same premises, opening in early access.
 
-## The system
+Not everything will be public, and nothing will lock you in. Commercial layers stay apart from the open core.
 
-Each part is an engine of its own. It stands alone, exchanges events with the others instead of calling them, and can be used alone or replaced.
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="./assets/section-posts-light.svg">
+  <img alt="04 · posts" src="./assets/section-posts-dark.svg" width="100%">
+</picture>
 
-| Part | What it does |
+- [How we build: the versatile premises](https://versatile.sh/posts/engineering/how-we-build)
+- [Open by default: how versatile.sh approaches open source](https://versatile.sh/posts/open-source/open-by-default)
+- [The versatile Connector: an MCP gateway that keeps AI agents under control](https://versatile.sh/posts/ai-agents/connector)
+
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="./assets/section-connect-light.svg">
+  <img alt="05 · connect" src="./assets/section-connect-dark.svg" width="100%">
+</picture>
+
+| | |
 | --- | --- |
-| **Agents** | Create, configure, pause and retire AI workers, each with a role and instructions. |
-| **Teams** | Organise agents into teams with an org chart and reporting lines, and set what may be delegated along each line. |
-| **Memory** | Each agent remembers what it learned across conversations, and refuses to keep personal data or secrets. |
-| **Routines** | Let a team or an agent run on its own, on a schedule or an event, inside the limits you set. |
-| **Chat and channels** | Conversations by subject, with people and agents together. Mention an agent to bring it in; steer or interrupt it while it works. |
-| **Tasks** | Track and assign work, with reviews required before it counts as done. |
-| **Workflows** | Describe a process, review it on a canvas and watch it run to the end. Work survives a crash and never runs twice by accident. |
-| **Approvals** | Review and confirm every change an agent wants to make. Refuse with a reason the agent reads. |
-| **Access** | Roles, invitations and per-agent access. Each action is off, ask first, or allowed. |
-| **Budgets** | Cap and track spend per agent or team, with hard stops. |
-| **Audit** | A full history of who, and which agent, did what. Every approval kept with its timeline. |
-| **Vault and connectors** | Secrets and connections kept in one protected place, written once and never shown again. |
+| Site | [versatile.sh](https://versatile.sh) |
+| X | [@versatile_sh](https://x.com/versatile_sh) |
+| Bluesky | [@versatile.sh](https://bsky.app/profile/versatile.sh) |
+| Instagram | [@versatile.sh](https://www.instagram.com/versatile.sh/) |
+| Email | [hello@versatile.sh](mailto:hello@versatile.sh) |
 
-## Products
+Tell us what you run. A person reads every message.
 
-| Product | What it is | Status |
-| --- | --- | --- |
-| **[live.versatile.sh](https://live.versatile.sh)** | Rooms to share a screen, a voice and a camera from a link. No account, nothing to install. | Open. |
-
-## Open source
-
-| Repository | What it is |
-| --- | --- |
-| **[agents-vault](https://github.com/versatile-sh/agents-vault)** | An account ledger for coding-agent harnesses: isolated Claude Code, Codex and Grok accounts, API keys and live limits. |
-| **[plugkit-protocol](https://github.com/versatile-sh/plugkit-protocol)** | The plugin protocol our engines share (`acplug/1`), with a host and a conformance kit. A plugin is written in the language you prefer, selected by configuration, and proves itself before production accepts it. |
-
-More of what we build will open as it becomes something we can stand behind in public.
-
-## How we build
-
-- **Research first.** A market study and a target architecture come before the code, and the decisions that are hard to undo are written down with the trade-off they settled.
-- **Small pieces under one rule.** Every engine follows the same contracts, so they combine into the shape a company needs instead of the shape we guessed.
-- **A boundary adopts an open protocol only when someone real consumes it.** We do not add standards for show.
-- **Nothing is closed.** Every engine accepts one more input, and you can add what is missing without touching what already works.
-- **Seen from the outside.** Every run is traced end to end, and each engine reports metrics, structured logs and its own health.
-
-## Who it is for
-
-Teams that want AI agents to do real work next to people: engineering, support, sales and marketing, operations and finance. Each agent has a role, a budget and a person who approves what matters.
-
-## Find us
-
-[@versatile_sh](https://x.com/versatile_sh) · enterprise@versatile.sh
+<a href="https://versatile.sh">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/footer-light.svg">
+    <img alt="versatile.sh" src="./assets/footer-dark.svg" width="100%">
+  </picture>
+</a>
