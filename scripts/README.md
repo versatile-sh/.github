@@ -5,7 +5,7 @@
 Builds the images of the organization profile and of the social accounts in the site's identity (ink and paper, lime accent, Instrument Serif with JetBrains Mono, 64px grid and light from the top). Every text is drawn as outlines, so GitHub shows the SVGs exactly as designed without web fonts.
 
 ```
-node scripts/build-assets.mjs
+mise run assets
 ```
 
 | Needs | Why |
@@ -15,7 +15,7 @@ node scripts/build-assets.mjs
 
 | Output | What |
 | --- | --- |
-| `profile/assets/*-{dark,light}.svg` | Banner, logo, section dividers and footer for the profile README (`<picture>` with `prefers-color-scheme`) |
+| `profile/assets/*-{dark,light}.svg` | Banner, logo, centered section banners (README standard v2) and footer for the profile README (`<picture>` with `prefers-color-scheme`) |
 | `social/*.png` | Avatar, X and Bluesky headers, GitHub social preview, three Instagram cards (dark only) |
 | `social/preview.png` | Contact sheet of everything, for review |
 

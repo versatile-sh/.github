@@ -1,0 +1,6 @@
+pre-push:
+  skip:
+    - ref: turbo/*
+  jobs:
+    - name: semgrep
+      run: mise run check
