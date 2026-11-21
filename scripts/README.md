@@ -15,7 +15,7 @@ node scripts/build-assets.mjs
 
 | Output | What |
 | --- | --- |
-| `profile/assets/*-{dark,light}.svg` | Banner, logo, section dividers and footer for the profile README (`<picture>` with `prefers-color-scheme`) |
+| `profile/assets/*-{dark,light}.svg` | Banner, logo, centered section banners (README standard v2) and footer for the profile README (`<picture>` with `prefers-color-scheme`) |
 | `social/*.png` | Avatar, X and Bluesky headers, GitHub social preview, three Instagram cards (dark only) |
 | `social/preview.png` | Contact sheet of everything, for review |
 

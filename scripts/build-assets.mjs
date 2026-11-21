@@ -162,17 +162,16 @@ function logo(t) {
   return svg(720, 200, "versatile.sh", "", column([[wordmark(t, 140), 0]], { x: 360, cy: 100 }).svg);
 }
 
-function section(t, index, name, tone) {
-  const w = 1280;
-  const h = 88;
-  const size = 20;
-  const label = line([mono(`0${index} ·`, size, t.muted), mono(` ${name.toUpperCase()}`, size, t.text)]);
-  const mark = line([tile(size, t.tone[tone])]);
-  const y = h / 2 - (label.box.top + label.box.bottom) / 2;
-  const end = w - 36 - width(mark);
-  const from = 36 + width(label) + 28;
-  const rule = `<rect x="${round(from)}" y="${round(h / 2 - 0.5)}" width="${round(end - 28 - from)}" height="1" fill="${t.line}" fill-opacity="${t.rule}"/>`;
-  return svg(w, h, `0${index} · ${name}`, "", `<rect width="${w}" height="${h}" rx="12" fill="${t.bg}"/>${draw(label, left(label, "start", 36), y)}${rule}${draw(mark, end, y)}`);
+function section(t, index, title, tone) {
+  const w = 960;
+  const h = 168;
+  const words = title.split(" ");
+  const plain = words.length > 1 ? `${words.slice(0, -1).join(" ")} ` : "";
+  const crumb = line([tile(18, t.tone[tone]), mono(`versatile.sh  /  0${index}`, 18, t.muted, 0.04)].map((span, i) => (i ? { ...span, gap: 14 } : span)));
+  const head = line([serif(plain, 64, t.text), serif(words.at(-1), 64, t.tone[tone], "italic")]);
+  const text = column([[crumb, 0], [head, 82]], { x: w / 2, cy: h / 2 + 4 });
+  const back = backdrop(t, w, h, { radius: 16, grid: [680, 260], beam: [460, 200] });
+  return svg(w, h, title, back.defs, back.body + text.svg);
 }
 
 function footer(t) {
@@ -236,8 +235,8 @@ function emit(dir, name, source, w, h, { png = false, plate, circle = false, sca
 for (const [mode, t] of Object.entries(THEME)) {
   emit(ASSETS, `banner-${mode}`, banner(t), 1280, 420);
   emit(ASSETS, `logo-${mode}`, logo(t), 720, 200, { plate: t.bg });
-  [["premises", "lime"], ["principles", "sky"], ["what we ship", "violet"], ["posts", "amber"], ["connect", "lime"]].forEach(([name, tone], index) =>
-    emit(ASSETS, `section-${name === "what we ship" ? "ship" : name}-${mode}`, section(t, index + 1, name, tone), 1280, 88),
+  [["premises", "Premises", "lime"], ["principles", "Principles", "sky"], ["ship", "What we ship", "violet"], ["posts", "Posts", "amber"], ["connect", "Connect", "lime"]].forEach(([slug, title, tone], index) =>
+    emit(ASSETS, `section-${slug}-${mode}`, section(t, index + 1, title, tone), 960, 168),
   );
   emit(ASSETS, `footer-${mode}`, footer(t), 1280, 260);
 }
