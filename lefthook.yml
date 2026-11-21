@@ -1,0 +1,6 @@
+pre-push:
+  skip:
+    - ref: turbo/*
+  jobs:
+    - name: semgrep
+      run: semgrep scan --metrics=off --disable-version-check --error --severity WARNING --severity ERROR --config p/secrets --baseline-commit "$(git merge-base HEAD origin/main)"
