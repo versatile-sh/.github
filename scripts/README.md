@@ -5,7 +5,7 @@
 Builds the images of the organization profile and of the social accounts in the site's identity (ink and paper, lime accent, Instrument Serif with JetBrains Mono, 64px grid and light from the top). Every text is drawn as outlines, so GitHub shows the SVGs exactly as designed without web fonts.
 
 ```
-node scripts/build-assets.mjs
+mise run assets
 ```
 
 | Needs | Why |

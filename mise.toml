@@ -1,0 +1,14 @@
+[tools]
+node = "24.22.0"
+
+[tasks.semgrep]
+description = "Semgrep p/secrets on the new findings since the merge base"
+run = "semgrep scan --metrics=off --disable-version-check --error --severity WARNING --severity ERROR --config p/secrets --baseline-commit \"$(git merge-base HEAD origin/main)\""
+
+[tasks.assets]
+description = "Rebuild the profile and social images (needs a built ../versatile.sh and rsvg-convert, see scripts/README.md)"
+run = "node scripts/build-assets.mjs"
+
+[tasks.check]
+description = "Local merge validation: Semgrep p/secrets"
+run = [{ task = "semgrep" }]
